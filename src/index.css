@@ -1,13 +1,74 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+:root {
+    --broder-radius-size: 5px;
+    --primary-color: #4285F4;
+    --secondary-color: white;
+    --big-font-size: 2rem;
+    --small-font-size: 1rem;
+    --quote-font: 'Poiret One', cursive;
+}
+
+#root {
+    background-color: var(--primary-color);
+    color: var(--primary-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+}
+
+#quote-box {
+    background-color: var(--secondary-color);
+    border-radius: var(--broder-radius-size);
+    font-size: var(--small-font-size);
+    padding: 2rem;
+    width: 500px;
+}
+
+.quote-container {
+    font-family: var(--quote-font);
+    font-weight: 1000;
+}
+
+.quote-text {
+    font-size: var(--big-font-size);
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.quote-author {
+    text-align: right;
+    margin-bottom: 1.5rem;
+}
+
+.button-container {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.button {
+    height: 40px;
+    width: 40px;
+    background-color: var(--primary-color);
+    border-radius: var(--broder-radius-size);
+    margin: .15rem;
+}
+
+.button:hover {
+    opacity: .85;
+}
+
+#new-quote {
+    border: none;
+    color: var(--secondary-color);
+    font-weight: bold;
+    padding: 0 1rem;
+    margin-left: auto;
+    width: auto;
 }
