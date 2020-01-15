@@ -6,8 +6,8 @@
 
 :root {
     --broder-radius-size: 5px;
-    --primary-color: #4285F4;
-    --secondary-color: white;
+    --primary-color: #674ea7ff;
+    --secondary-color: #f3f3f3ff;
     --big-font-size: 2rem;
     --small-font-size: 1rem;
     --quote-font: 'Poiret One', cursive;
@@ -36,6 +36,13 @@
     font-weight: 1000;
 }
 
+.quote-icon {
+    width: 40px;
+    margin-right: 0.5rem;
+    position: relative;
+    bottom: 0.5rem;
+}
+
 .quote-text {
     font-size: var(--big-font-size);
     text-align: center;
@@ -53,6 +60,7 @@
 }
 
 .button {
+    display: flex;
     height: 40px;
     width: 40px;
     background-color: var(--primary-color);
@@ -61,7 +69,14 @@
 }
 
 .button:hover {
+    cursor: pointer;
     opacity: .85;
+}
+
+.icon-image {
+    width: 70%;
+    align-self: center;
+    margin: auto;
 }
 
 #new-quote {
