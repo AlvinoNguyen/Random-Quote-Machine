@@ -7,22 +7,33 @@ class App extends Component {
     constructor() {
         super();
         this.state = {
-            color: this.getRandomColor(),
-            quoteText: "Success is a journey, not a destination.",
-            quoteAuthor: "Authur Ashe"
+            color: '#000000',
+            quoteText: "",
+            quoteAuthor: ""
         };
         this.handleClick = this.handleClick.bind(this);
+        this.handleClick();
     }
 
     getRandomColor() {
-        return colors[Math.floor(Math.random() * colors.length)];
+        let newColor = colors[Math.floor(Math.random() * colors.length)];
+        while(newColor === this.state.color)
+            newColor = colors[Math.floor(Math.random() * colors.length)];
+        return newColor;
     }
 
     handleClick() {
-        this.setState({
-            color: this.getRandomColor(),
-            quoteText: "Changed quote",
-            quoteAuthor: "Changed author"
+        fetch('https://cors-anywhere.herokuapp.com/https://api.forismatic.com/api/1.0/?method=getQuote&lang=en&format=json')
+        .then(res => res.json())
+        .then(data => {
+            this.setState({
+                color: this.getRandomColor(),
+                quoteText: data.quoteText,
+                quoteAuthor: data.quoteAuthor ? data.quoteAuthor : "Unknown"
+            });
+        })
+        .catch(err => {
+            console.log(err);
         });
     }
 
@@ -40,7 +51,7 @@ class App extends Component {
                         author={this.state.quoteAuthor}
                     />
                     <ButtonList
-                        color={this.state.color} 
+                        color={this.state.color}
                         handleClick={this.handleClick}
                     />
                 </div>

@@ -9,9 +9,8 @@ const Quote = (props) => {
         <div className="quote-container" style={styles}>
             <div className="quote-text">
                 <span id="text">
-                    <span class="quotation">“</span>
+                    <span className="quotation">“</span>
                     {`${props.text}`}
-                    <span class="quotation">”</span>
                 </span>
             </div>
             <div className="quote-author">

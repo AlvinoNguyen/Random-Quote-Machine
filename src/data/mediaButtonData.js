@@ -1,6 +1,6 @@
 const mediaButtonData = [
     {
-        link: "",
+        link: "https://twitter.com/intent/tweet?text=",
         imageURL: "./images/twitter.svg",
         name: "Twitter",
         key: "twitter"
