@@ -3,12 +3,17 @@ import MediaButton from "./MediaButton.js";
 import mediaButtonData from "../data/mediaButtonData.js";
 
 const ButtonList = (props) => {
+    const styles = {
+        backgroundColor: props.color
+    };
+
     const mediaButtonList = mediaButtonData.map(media => (
         <MediaButton
             link={media.link}
             imageURL={media.imageURL}
             name={media.name}
             key={media.key}
+            styles={styles}
         />
     ));
 
@@ -19,6 +24,7 @@ const ButtonList = (props) => {
                 className="button"
                 id="new-quote"
                 onClick={() => {props.handleClick()}}
+                style={styles}
             >
                 New quote
             </button>

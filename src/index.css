@@ -6,16 +6,13 @@
 
 :root {
     --broder-radius-size: 5px;
-    --primary-color: #674ea7ff;
     --secondary-color: #f3f3f3ff;
     --big-font-size: 2rem;
     --small-font-size: 1rem;
     --quote-font: 'Poiret One', cursive;
 }
 
-#root {
-    background-color: var(--primary-color);
-    color: var(--primary-color);
+#app-container {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -36,17 +33,17 @@
     font-weight: 1000;
 }
 
-.quote-icon {
-    width: 40px;
-    margin-right: 0.5rem;
-    position: relative;
-    bottom: 0.5rem;
-}
-
 .quote-text {
     font-size: var(--big-font-size);
     text-align: center;
     margin-bottom: 1.5rem;
+}
+
+.quotation {
+    font-family: 'Times New Roman', Times, serif;
+    margin: 0 .5rem;
+    position: relative;
+    bottom: .33rem;
 }
 
 .quote-author {
@@ -63,7 +60,6 @@
     display: flex;
     height: 40px;
     width: 40px;
-    background-color: var(--primary-color);
     border-radius: var(--broder-radius-size);
     margin: .15rem;
 }

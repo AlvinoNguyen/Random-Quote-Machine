@@ -6,6 +6,7 @@ const MediaButton = (props) => (
         href={props.link}
         target="_blank"
         rel="noopener noreferrer"
+        style={props.styles}
     >
         <img
             className="icon-image"

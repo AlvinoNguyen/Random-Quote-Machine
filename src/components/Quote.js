@@ -1,24 +1,24 @@
 import React from "react";
 
-class Quote extends React.Component {
+const Quote = (props) => {
+    const styles = {
+        color: props.color
+    };
 
-    constructor() {
-        super();
-    }
-
-    render() {
-        return (
-            <div className="quote-container">
-                <div className="quote-text">
-                    <img className="quote-icon" src="./images/quote-left-solid.svg" alt=""/>
-                    <span id="text">{`${this.props.text}`}</span>
-                </div>
-                <div className="quote-author">
-                    - <span id="author">{`${this.props.author}`}</span>
-                </div>
+    return (
+        <div className="quote-container" style={styles}>
+            <div className="quote-text">
+                <span id="text">
+                    <span class="quotation">“</span>
+                    {`${props.text}`}
+                    <span class="quotation">”</span>
+                </span>
             </div>
-        );
-    }
+            <div className="quote-author">
+                <span id="author">- {`${props.author}`}</span>
+            </div>
+        </div>
+    );
 }
 
 export default Quote;
