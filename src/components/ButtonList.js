@@ -9,7 +9,7 @@ const ButtonList = (props) => {
 
     const mediaButtonList = mediaButtonData.map(media => (
         <MediaButton
-            link={media.link}
+            link={`${media.link}${media.toApiText(props.text, props.author)}`}
             imageURL={media.imageURL}
             name={media.name}
             key={media.key}

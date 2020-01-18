@@ -3,13 +3,19 @@ const mediaButtonData = [
         link: "https://twitter.com/intent/tweet?text=",
         imageURL: "./images/twitter.svg",
         name: "Twitter",
-        key: "twitter"
+        key: "twitter",
+        toApiText: function(text, author) {
+            return `"${text.trim()}" - ${author}`
+        },
     },
     {
-        link: "",
+        link: "https://www.instagram.com/",
         imageURL: "./images/instagram.svg",
         name: "Instagram",
-        key: "instagram"
+        key: "instagram",
+        toApiText: function(text, author) {
+            return "";
+        },
     }
 ];
 

@@ -51,6 +51,8 @@ class App extends Component {
                         author={this.state.quoteAuthor}
                     />
                     <ButtonList
+                        text={this.state.quoteText}
+                        author={this.state.quoteAuthor}
                         color={this.state.color}
                         handleClick={this.handleClick}
                     />
